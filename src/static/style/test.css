@@ -78,12 +78,12 @@
 }
 .sparkle {
     position: absolute;
-    width: 5px; /* Adjust size as needed */
-    height: 5px; /* Adjust size as needed */
+    width: 4px; /* Adjust size as needed */
+    height: 4px; /* Adjust size as needed */
     border-radius: 50%;
     background-color: #ffffff; /* Sparkles can be any color */
     opacity: 0; /* Initially invisible */
-    animation: sparkle 0.5s ease-in-out forwards; /* Animation properties */
+    animation: sparkle 1s ease-in-out forwards; /* Animation properties */
 }
   
 @keyframes sparkle {
