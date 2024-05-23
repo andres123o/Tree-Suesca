@@ -5,7 +5,7 @@ const corazonLike = document.querySelector('.img-like')
 const generateSparkles = (numSparkles) => {
     const buttonRect = botonLike.getBoundingClientRect(); // Obtener las dimensiones y posición del botón
 
-    const radius = buttonRect.width / 2 + 5; // Radio del círculo (ajustable según necesites)
+    const radius = buttonRect.width / 2 + 8; // Radio del círculo (ajustable según necesites)
     const angleIncrement = (2 * Math.PI) / numSparkles; // Incremento de ángulo para distribuir uniformemente las chispitas
 
     for (let i = 0; i < numSparkles; i++) {

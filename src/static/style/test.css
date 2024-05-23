@@ -83,7 +83,7 @@
     border-radius: 50%;
     background-color: #ffffff; /* Sparkles can be any color */
     opacity: 0; /* Initially invisible */
-    animation: sparkle 0.8s ease-in-out forwards; /* Animation properties */
+    animation: sparkle 1s ease-in-out forwards; /* Animation properties */
 }
   
 @keyframes sparkle {
