@@ -3,24 +3,26 @@ const corazonLike = document.querySelector('.img-like')
 
 // Generador de chispitas
 const generateSparkles = (numSparkles) => {
-    const buttonRect = botonLike.getBoundingClientRect();
+    const buttonRect = botonLike.getBoundingClientRect(); // Obtener las dimensiones y posición del botón
+
+    const radius = buttonRect.width / 2 + 5; // Radio del círculo (ajustable según necesites)
+    const angleIncrement = (2 * Math.PI) / numSparkles; // Incremento de ángulo para distribuir uniformemente las chispitas
 
     for (let i = 0; i < numSparkles; i++) {
         const sparkle = document.createElement('div');
         sparkle.classList.add('sparkle');
-  
-        // Randomize position around the button
-        const randomAngle = Math.random() * 2 * Math.PI; // Random angle in radians
-        const randomRadius = botonLike.offsetWidth / 2 + (Math.random() * 20 + 10); // Random radius
 
-        const randomX = buttonRect.left + (botonLike.offsetWidth / 2) + randomRadius * Math.cos(randomAngle);
-        const randomY = buttonRect.top + (botonLike.offsetHeight / 2) + randomRadius * Math.sin(randomAngle);
+        // Calcular posición uniformemente distribuida alrededor del botón
+        const angle = i * angleIncrement;
+        const sparkleX = buttonRect.left + buttonRect.width / 2 + radius * Math.cos(angle);
+        const sparkleY = buttonRect.top + buttonRect.height / 2 + radius * Math.sin(angle);
 
-        sparkle.style.left = `${randomX - buttonRect.left}px`; // Adjust position relative to the button
-        sparkle.style.top = `${randomY - buttonRect.top}px`; // Adjust position relative to the button
-  
-        botonLike.appendChild(sparkle); // Append sparkle to the like button container
+        sparkle.style.left = `${sparkleX - buttonRect.left}px`; // Ajustar la posición relativa al botón
+        sparkle.style.top = `${sparkleY - buttonRect.top}px`; // Ajustar la posición relativa al botón
 
+        botonLike.appendChild(sparkle);
+
+        // Eliminar la chispita después de que la animación haya terminado
         sparkle.addEventListener('animationend', () => {
             sparkle.remove();
         });
@@ -39,6 +41,6 @@ botonLike.addEventListener('click', () => {
         corazonLike.src = '/src/static/utils/icons8-me-gusta-relleno-48.png';
         isLike = true
         // Generate sparkles on click
-        generateSparkles(30);
+        generateSparkles(20);
     }
 })
