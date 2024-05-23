@@ -65,6 +65,10 @@
     right: 2em;
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.5);
 }
+.container-like:active {
+    transform: scale(1.1);
+    transition-duration: 0.2s;
+}
 .container-like img {
     width: 70%;
 }
