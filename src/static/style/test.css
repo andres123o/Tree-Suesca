@@ -165,19 +165,29 @@
     height: 6vh;
     justify-content: space-around;
     align-items: center;
-    padding-left: 10%;
-    padding-right: 9%;
     margin-top: 3%;
+    padding-left: 7%;
+    padding-right: 7%;
+}
+.contaner-iconos-text {
+    width: 21%;
+    height: 100%;
+}
+.text-iconos {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 7%;
 }
 .iconos {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 13%;
+    width: 60%;
     height: 80%;
     border-radius: 50%;
     background-color: var(--red-botons);
     box-shadow: 5px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
 
 }
 .iconos img {
