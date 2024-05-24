@@ -1,5 +1,8 @@
 const botonLike = document.querySelector('.container-like')
 const corazonLike = document.querySelector('.img-like')
+const containerInfo = document.querySelector('.container-info')
+const containerImg = document.querySelector('.container-img')
+const containerImgHeight = containerImg.offsetHeight
 
 // Generador de chispitas
 const generateSparkles = (numSparkles) => {
@@ -44,3 +47,18 @@ botonLike.addEventListener('click', () => {
         generateSparkles(20);
     }
 })
+
+window.addEventListener('scroll', () => {
+    // // Calcula la posición vertical actual del scroll
+    // const scrollY = window.scrollY || window.pageYOffset;
+
+    // // Calcula el margen superior para container-info
+    // let marginTop = -20 - (scrollY * 0.2); // Ajusta el factor según desees la velocidad de movimiento
+
+    // // Limita el margen superior para que no sea menor que -containerImgHeight
+    // marginTop = Math.max(marginTop, -containerImgHeight);
+
+    // // Aplica el margen superior a container-info
+    // containerInfo.style.marginTop = marginTop + '%';
+    // console.log('Hello World')
+});
