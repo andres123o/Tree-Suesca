@@ -268,4 +268,51 @@
     color: #ffffff;
     box-sizing: border-box;
 }
+.container-descripcion {
+    width: 100%;
+    padding: 3%;
+    position: relative;
+    padding-left: 8%;
+    padding-right: 8%;
+}
 
+.descripcion {
+    text-align: justify;
+    color: var(--font-color-secundary);
+    overflow: hidden; /* Oculta el texto desbordante */
+    position: relative;
+}
+
+.show-more {
+    color: blue;
+    cursor: pointer;
+}
+
+.show-more-expanded {
+    max-height: none; /* Elimina la restricción de altura */
+    overflow: visible; /* Muestra el texto completo */
+}
+.container-seleccion {
+    width: 100%;
+    height: 40vh;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+.container-seleccion .opcion {
+    width: 90%;
+    height: 20%;
+    margin: 0 auto;
+    margin-bottom: 4%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+.opcion img {
+    width: 30px;
+    height: 30px;
+    margin: 4px;
+}
+.opcion p {
+    margin-left: 15px;
+}

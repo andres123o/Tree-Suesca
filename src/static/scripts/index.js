@@ -48,17 +48,31 @@ botonLike.addEventListener('click', () => {
     }
 })
 
-window.addEventListener('scroll', () => {
-    // // Calcula la posición vertical actual del scroll
-    // const scrollY = window.scrollY || window.pageYOffset;
+// Lógica para "more" y "less" en el texto de la descripción
+const descripcion = document.getElementById('descripcion-texto');
+const fullText = descripcion.textContent;
+const maxTextLength = 100; // Máxima longitud del texto visible antes de "more"
 
-    // // Calcula el margen superior para container-info
-    // let marginTop = -20 - (scrollY * 0.2); // Ajusta el factor según desees la velocidad de movimiento
+if (fullText.length > maxTextLength) {
+    const visibleText = fullText.slice(0, maxTextLength) + '... ';
+    const moreText = document.createElement('span');
+    moreText.classList.add('show-more');
+    moreText.textContent = 'more';
 
-    // // Limita el margen superior para que no sea menor que -containerImgHeight
-    // marginTop = Math.max(marginTop, -containerImgHeight);
+    descripcion.textContent = visibleText;
+    descripcion.appendChild(moreText);
 
-    // // Aplica el margen superior a container-info
-    // containerInfo.style.marginTop = marginTop + '%';
-    // console.log('Hello World')
-});
+    moreText.addEventListener('click', function () {
+        if (descripcion.classList.contains('show-more-expanded')) {
+            descripcion.textContent = visibleText;
+            moreText.textContent = 'more';
+            descripcion.appendChild(moreText);
+            descripcion.classList.remove('show-more-expanded');
+        } else {
+            descripcion.textContent = fullText + ' ';
+            moreText.textContent = 'less';
+            descripcion.appendChild(moreText);
+            descripcion.classList.add('show-more-expanded');
+        }
+    });
+}
