@@ -127,6 +127,9 @@
     height: 95%;
     border-radius: 0.5em;
 }
+.carrusel img.selected {
+    opacity: 0.5;
+}
 .container-name-ruta {
     width: 100%;
     height: 5vh;

@@ -76,3 +76,21 @@ if (fullText.length > maxTextLength) {
         }
     });
 }
+
+// Funcionalidad del carrusel
+document.addEventListener("DOMContentLoaded", () => {
+    const carruselImages = document.querySelectorAll(".carrusel img");
+
+    carruselImages.forEach(img => {
+        img.addEventListener("click", () => {
+            // Quitar la clase 'selected' de todas las imágenes
+            carruselImages.forEach(img => img.classList.remove("selected"));
+            
+            // Añadir la clase 'selected' a la imagen clicada
+            img.classList.add("selected");
+
+            // Cambiar la imagen de fondo de .container-img
+            containerImg.style.backgroundImage = `url(${img.src})`;
+        });
+    });
+});
