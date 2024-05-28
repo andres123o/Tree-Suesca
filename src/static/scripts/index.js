@@ -96,3 +96,19 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 });
+
+//  Ultima actulización borrar desde aqui =>>>
+const botonTiempo = document.getElementById('tiempo')
+const ventanaEmergente = document.getElementById("miVentanaEmergente");
+let btnCerrar = document.getElementById("cerrarVentana")
+
+botonTiempo.addEventListener("click", function() {
+    // ventanaEmergente.style.display = "block";
+    ventanaEmergente.style.transform = "scale(1)";
+});
+
+btnCerrar.addEventListener("click", function() {
+    // ventanaEmergente.style.display = "none"
+
+    ventanaEmergente.style.transform = "scale(0)"
+})
