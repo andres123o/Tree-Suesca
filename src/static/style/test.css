@@ -126,7 +126,7 @@
 .carrusel img {
     width: 23%;
     height: 95%;
-    margin: 0 0.1em;
+    margin: 0 0.12em;
     border-radius: 0.5em;
 }
 .carrusel img.selected {
