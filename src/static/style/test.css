@@ -117,14 +117,16 @@
     height: calc(18vw);
     border-radius: 0.5em;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     padding: 1%;
     box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.5);
+    overflow-x: auto;
 }
 .carrusel img {
     width: 23%;
     height: 95%;
+    margin: 0 0.1em;
     border-radius: 0.5em;
 }
 .carrusel img.selected {

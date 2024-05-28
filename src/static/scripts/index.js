@@ -79,9 +79,11 @@ if (fullText.length > maxTextLength) {
 
 // Funcionalidad del carrusel
 document.addEventListener("DOMContentLoaded", () => {
-    const carruselImages = document.querySelectorAll(".carrusel img");
+    const carruselImages = document.querySelectorAll(".carrusel-img");
+    console.log(carruselImages)
 
     carruselImages.forEach(img => {
+
         img.addEventListener("click", () => {
             // Quitar la clase 'selected' de todas las imágenes
             carruselImages.forEach(img => img.classList.remove("selected"));
