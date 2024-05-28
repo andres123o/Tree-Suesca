@@ -117,7 +117,7 @@
     height: calc(18vw);
     border-radius: 0.5em;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 1%;
     box-shadow: 1px 5px 12px rgba(0, 0, 0, 0.5);
